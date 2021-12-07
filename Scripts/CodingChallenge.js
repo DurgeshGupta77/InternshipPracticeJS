@@ -63,14 +63,62 @@
 // console.log("5" + 1); //"51"
 // console.log(100 + "100"); //"100100"
 
-let welcomeEl = document.getElementById("welcome-el");
+// let welcomeEl = document.getElementById("welcome-el");
 
-let names = "Durgesh";
+// let names = "Durgesh";
 
-let greetings = "Hello fellow Earthlings! Welcome to my Page. Your name shall be ";
+// let greetings = "Hello fellow Earthlings! Welcome to my Page. Your name shall be ";
 
-welcomeEl.innerText = greetings + names;
+// welcomeEl.innerText = greetings + names;
 
-// console.log(greetingText);
+// // console.log(greetingText);
 
-welcomeEl.innerText = welcomeEl.innerText + "✌️";
+// welcomeEl.innerText = welcomeEl.innerText + "✌️";
+
+// let firstName = "Durgesh";
+// let lastName = "Gupta";
+// let middleName = "Prasad";
+
+// let fullName = firstName + " " + middleName + " " +lastName
+
+// console.log(fullName);
+
+// function displayMessage(){
+//     let firstName = "Linda";
+//     let greetings = "Hi there";
+
+//     console.log(greetings + " , " + firstName + "!")
+// }
+
+// displayMessage();
+
+// let myPoints = 3;
+
+// function add3Points(){
+//     myPoints+=3;
+// }
+
+// function remove1Points(){
+//     myPoints-=1;
+// }
+
+// add3Points();
+// add3Points();
+// add3Points();
+// remove1Points();
+// remove1Points();
+
+// //We have to get myPoints to 10
+// console.log(myPoints);
+
+let age = 92;
+
+if(age>100){
+    console.log("Not Eligible you have already gotten a card from the King the almighty Durgesh");
+}
+else if(age === 100){
+    console.log("Here's your greeting card from the King the almighty Durgesh");
+}
+else{
+    console.log("No you can't have the card because you do not fulfill the requirement");
+}

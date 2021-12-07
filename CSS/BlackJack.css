@@ -1,0 +1,20 @@
+body{
+    background-image: url('../assets/Table.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+h1{
+    color: goldenrod;
+    margin-top: 200px;
+    font-size: 80px;
+}
+
+p{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
