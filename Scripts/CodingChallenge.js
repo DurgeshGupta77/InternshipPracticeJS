@@ -111,14 +111,98 @@
 // //We have to get myPoints to 10
 // console.log(myPoints);
 
-let age = 92;
+// let age = 92;
 
-if(age>100){
-    console.log("Not Eligible you have already gotten a card from the King the almighty Durgesh");
-}
-else if(age === 100){
-    console.log("Here's your greeting card from the King the almighty Durgesh");
-}
-else{
-    console.log("No you can't have the card because you do not fulfill the requirement");
-}
+// if(age>100){
+//     console.log("Not Eligible you have already gotten a card from the King the almighty Durgesh");
+// }
+// else if(age === 100){
+//     console.log("Here's your greeting card from the King the almighty Durgesh");
+// }
+// else{
+//     console.log("No you can't have the card because you do not fulfill the requirement");
+// }
+
+// let myArr = [
+//     'Former Computer Science Teacher at KKSS',
+//     'Working in Yarsha Studio or Fintech Nepal Pvt.Ltd. since Nov 19,2021',
+//     'Completed SLC from Kumudini Kunj Secondary School',
+//     'Completed Plus 2 degree in Management from Kumudini Kunj Secondary School',
+//     'Completer BSc.(Hons.) degree in Computer Science from University of Wolverhampton',
+//     'Graphic Designing Certification from PIT Institution'
+// ];
+
+// for(let i = 0; i < myArr.length; i++){
+//     console.log(myArr[i]);
+// }
+
+// let myArr = ["Durgesh Prasad Gupta", 22, true];
+
+// let messages = [
+//     "Hey, How's it going",
+//     "I'm great thanks. How about you?",
+//     "All good! Lately working on my Portfolio"
+// ];
+
+// let newMessage = "Same here! Workoholic af!";
+
+// messages.push(newMessage);
+// console.log(messages);
+
+// messages.pop();
+// console.log(messages);
+
+// for(let i = 10; i <= 100; i+=10){
+//     console.log(i);
+// }
+
+// let cards = [7,3,9];
+
+// for(let i = 0; i < cards.length; i++){
+//     console.log(cards[i]);
+// }
+
+// let welcomeEl = document.getElementById("welcome-el");
+
+// let sentence = ["Hello", "my", "name", "is", "Durgesh"];
+
+// for(let i = 0; i<sentence.length; i++){
+//     welcomeEl.textContent += " " + sentence[i];
+// }
+
+// let player1Time = 102;
+// let player2Time = 107;
+
+// function totalRaceTime(){
+//     let sum = player1Time + player2Time;
+//     return sum;
+// }
+
+// let raceTime = totalRaceTime();
+
+// console.log(raceTime);
+
+// let randomNumber = Math.floor(Math.random() * 6); //Gives random number from 0 to 5
+
+// let newRandomNumber = rollDice();
+
+// function rollDice(){
+//     return Math.floor(Math.random() * 6) + 1; //Gives random number from 1 to 5
+// }
+
+// console.log(newRandomNumber);
+
+let airbnbListings = {
+    "Name" : "The Half Blood Dragon's Castle",
+    "Availability" : true,
+    "Price" : 150,
+    "Tags" : ["Castle", "Britain", "15th Century"],
+    "sayHello" : function (){
+        console.log("Hello calling from inside object");
+    }
+};
+
+console.log(airbnbListings.Name);
+console.log(airbnbListings.Tags[0]);
+console.log(airbnbListings.Price);
+airbnbListings.sayHello();

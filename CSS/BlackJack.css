@@ -18,3 +18,27 @@ p{
     font-weight: bold;
     font-style: italic;
 }
+
+#clickBtn{
+    /* border: 1px solid orangered; */
+    border-radius: 5px;
+    padding: 15px 32px;
+    margin-top: 50px;
+    background-color: goldenrod;
+    color: #016f32;
+    width: 300px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#draw-card{
+    /* border: 1px solid orangered; */
+    border-radius: 5px;
+    padding: 15px 32px;
+    margin-top: 10px;
+    background-color: goldenrod;
+    color: #016f32;
+    width: 300px;
+    font-size: 22px;
+    font-weight: bold;
+}
