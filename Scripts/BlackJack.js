@@ -87,6 +87,7 @@ function renderGame(){
         cardsEl.textContent += cardsArray[i] + " , ";
     }
     
+    //Disabling the button so that it can't be clicked again
     clickBtn.disabled = true;
 }
 

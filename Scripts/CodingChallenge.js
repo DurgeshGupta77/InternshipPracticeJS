@@ -206,3 +206,83 @@ console.log(airbnbListings.Name);
 console.log(airbnbListings.Tags[0]);
 console.log(airbnbListings.Price);
 airbnbListings.sayHello();
+
+let person = {
+    "name" : "Durgesh Prasad Gupta",
+    "age" : 22,
+    "country" : "Nepal"
+};
+
+function logData(){
+    return person.name + " is " + person.age + " years old " + "and lives in " + person.country;
+}
+
+console.log(logData());
+
+let age = 15;
+
+if(age<=6){
+    console.log("Free to ride");
+}
+else if(age>6 && age <= 17){
+    console.log("Child Discount");
+}
+else if(age >=18 && age <=26){
+    console.log("Student Discount");
+}
+else if(age>=27 && age<=66){
+    console.log("Full Price");
+}
+else{
+    console.log("Senior Citizen Discount");
+}
+
+let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"];
+console.log("The "+largeCountries.length+" largest countries in the world:");
+for(let i = 0; i < largeCountries.length; i++){
+    console.log(largeCountries[i]);
+}
+
+let messedUpLargeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"];
+messedUpLargeCountries.pop();
+messedUpLargeCountries.shift();
+messedUpLargeCountries.unshift("China");
+messedUpLargeCountries.push("Pakistan");
+console.log(messedUpLargeCountries);
+
+let dayOfMonth = 13;
+let weekDay = "Friday";
+
+if(dayOfMonth === 13 && weekDay === "Friday"){
+    console.log("🦇");
+}
+
+let hands = ["Rock", "Paper", "Scissor"];
+
+function returnRandomItemsFromArray(){
+    let randomNumber = Math.floor(Math.random() * 4);
+
+    return hands[randomNumber];
+}
+
+console.log(returnRandomItemsFromArray());
+
+
+let fruits = ["🍎", "🍊", "🍊", "🍊", "🍎", "🍊", "🍎"];
+
+let appleShelf = document.getElementById("apple-shelf");
+let orangeShelf = document.getElementById("orange-shelf");
+
+//Create a function that puts apple into appleShelf and orange into orangeShelf
+function sortFruits(){
+    for(let i = 0; i < fruits.length; i++){
+        if(fruits[i] === "🍎"){
+            appleShelf.textContent+=fruits[i];
+        }
+        else{
+            orangeShelf.textContent+=fruits[i];
+        }
+    }
+}
+
+sortFruits();
