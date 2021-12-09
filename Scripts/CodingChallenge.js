@@ -286,3 +286,33 @@ function sortFruits(){
 }
 
 sortFruits();
+
+let box = document.getElementById("box");
+
+box.addEventListener("click", function(){
+    console.log("The box was clicked");
+});
+
+let buyBtn = document.getElementById("buy-btn");
+
+buyBtn.innerHTML = "<button>" + "Buy the Item!" +"</button>" + "<br>"
+
+buyBtn.addEventListener("click", renderParagraph);
+
+function renderParagraph(){
+    buyBtn.innerHTML += "<p>" + "Thank you for buying our product" + "</p>";
+}
+
+const recipients = "Uzumaki";
+const sender = "Durgesh"
+
+const email = "Hey " + recipients + "! How is it going! Cheers!";
+
+const temEmail = `Hey ${recipients}! How is it going! Cheers ${sender}!`;
+
+console.log(email);
+console.log(temEmail);
+
+localStorage.setItem("Durgesh","isgreat");
+console.log(localStorage.getItem("Durgesh"));
+localStorage.clear();
