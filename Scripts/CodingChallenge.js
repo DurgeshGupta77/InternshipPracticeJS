@@ -316,3 +316,123 @@ console.log(temEmail);
 localStorage.setItem("Durgesh","isgreat");
 console.log(localStorage.getItem("Durgesh"));
 localStorage.clear();
+
+//to know truthy or falsy values
+let trueorFalse = Boolean("Ram");
+
+console.log(trueorFalse);
+
+trueorFalse = Boolean("");
+console.log(trueorFalse);
+
+//Truthy or Falsy Challenge
+console.log("Truthy or Falsy Challenge");
+console.log(Boolean(""));//Falsy
+console.log(Boolean("0"));//Truthy because it is not 0 it is string character 0
+console.log(Boolean(100));//Truthy
+console.log(Boolean(null));//Falsy
+console.log(Boolean([0]));//Truthy
+console.log(Boolean(-0));//Falsy
+
+//Function Parameter
+const welcomeEl = document.getElementById("welcome-el");
+
+function greetUser(greetings, name, emoji){
+    welcomeEl.textContent = `${greetings}, ${name}! ${emoji}`;
+}
+
+greetUser("Welcome Back", "Durgesh", "😲");
+
+function add(num1, num2){
+    let sum = num1 + num2;
+    return sum;
+}
+
+console.log(add(3,4));
+
+function getFirst(arr){
+    return arr[0];
+}
+
+console.log(getFirst([1,2]))
+
+const player = "Per";
+const opponent = "Nick";
+const game = "AmazingFighter";
+let points = 0;
+let hasWon = false;
+
+//Playing the game
+points+=100;
+hasWon = true;
+
+//Announcing the winner
+if(hasWon){
+    console.log(`${player} got ${points} points and won the ${game}!`);
+}
+else{
+    console.log(`The winner is ${opponent}! ${player} has lost the game`);
+}
+
+let myCourse = ["Learn CSS Animation", "UI Design Fundamentals", "Intro to Clean Code"];
+
+function logArray(arr){
+    for(let i = 0; i < arr.length; i++ ){
+        console.log(arr[i]);
+    }
+}
+
+logArray(myCourse);
+
+let data = [
+    {
+        player: 'Jane',
+        score: 52
+    },
+    {
+        player: 'Mark',
+        score: 41
+    }
+];
+
+const fetchBtn = document.getElementById("fetch-btn");
+
+fetchBtn.addEventListener("click", function(){
+    console.log(data[0].score)
+});
+
+function generateSentence(desc, arr){
+    let arrlen = arr.length;
+    let baseString = `The ${arrlen} ${desc} are `;
+    const lastIndex = arrlen-1;
+    for(let i = 0; i < arrlen; i++){
+        if(i === lastIndex){
+            baseString+=arr[i]; 
+        }
+        else{
+            baseString+=arr[i] + " , "; 
+        }
+        
+    }
+
+    return baseString;
+}
+
+console.log(generateSentence("Highest Mountain", ["Mt.Everest", "Mt. K2", "Mt. Annapurna"]));
+
+const img = [
+    "assets/BlackJack.jpg",
+    "assets/Nike.jpg"
+];
+
+const container = document.getElementById("container");
+
+function render(){
+    let imgDom = "";
+    for(let i = 0; i < img.length; i++){
+        imgDom += `<img src = "${img[i]}">`
+    }
+
+    container.innerHTML+=imgDom;
+}
+render();

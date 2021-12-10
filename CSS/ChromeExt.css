@@ -19,13 +19,22 @@ body{
     background-color: rgba(135, 206, 235, 0.5);
 }
 
-#save-btn{
+button{
     background-color: #5f9341;
     padding: 15px 20px;
     /* font-size: 20px; */
     font-weight: bold;
     color: white;
        
+}
+
+#del-btn{
+    background-color: #fff;
+    padding: 15px 20px;
+    /* font-size: 20px; */
+    font-weight: bold;
+    color: #5f9341;
+    border: 2px solid #5f9341;       
 }
 
 ul{

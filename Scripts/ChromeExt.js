@@ -4,29 +4,28 @@ let savedLeads = [];
 const inputEl = document.getElementById("input-el");
 const saveBtn = document.getElementById("save-btn");
 const ulEl = document.getElementById("ul-el");
+const delBtn = document.getElementById("del-btn");
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("leads"));//JSON.parse to get as array bcz local storage stores as string
+const tabBtn = document.getElementById("tab-btn");
 
+
+delBtn.addEventListener("dblclick", delDataFromLocalStorage);
 saveBtn.addEventListener("click", saveToLead);
+tabBtn.addEventListener("click", tabClick);
 
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem("leads"));
-console.log(leadsFromLocalStorage);
 
-function saveToLead(){
-    let leads = inputEl.value;
-    console.log(leads);
-    myLeads.push(leads);
-    inputEl.value = "";      
-    renderLeads();
-    //Pushing array myLeads into local storage
-    localStorage.setItem("leads",JSON.stringify(savedLeads)); 
+if(leadsFromLocalStorage!=null){
+    myLeads = leadsFromLocalStorage;
+    render(myLeads);
 }
 
-function renderLeads(){
+function render(leads){
     let listItems = "";
 
-    for(let i = 0; i < myLeads.length; i++){
+    for(let i = 0; i < leads.length; i++){
         //DOM Manipulation is costly so we will add our items in listItems string and after loop is over use innerHTML to parse it.
-        listItems += "<li>" + `<a href = ${"https:\\"+myLeads[i]} target = "_blank">` + myLeads[i] + "</a>" + "</li>";
-        savedLeads.push(myLeads[i]);    
+        listItems += "<li>" + `<a href = ${"https:\\"+leads[i]} target = "_blank">` + leads[i] + "</a>" + "</li>";
+        savedLeads.push(leads[i]);    
     }
 
     ulEl.innerHTML += listItems //InnerHTML parses <li> and </li> as HTML content rather than String
@@ -44,7 +43,36 @@ function renderLeads(){
     // }
 
     // localStorage.setItem("leads",JSON.stringify(myLeads));
-    // console.log(savedLeads);
+    
     myLeads = [];
 
 }
+
+function saveToLead(){
+    let leads = inputEl.value;
+    // console.log(leads);
+    myLeads.push(leads);
+    inputEl.value = "";      
+    render(myLeads);
+    //Pushing array myLeads into local storage
+    localStorage.setItem("leads",JSON.stringify(savedLeads)); 
+}
+
+function delDataFromLocalStorage(){
+    localStorage.clear();
+    myLeads = [];
+    savedLeads = [];
+    render(myLeads);
+    console.log("Double clicked");
+    location.reload(); //Reloads the page automatically
+}
+
+function tabClick(){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        myLeads.push(tabs[0].url);    
+        render(myLeads);
+        localStorage.setItem("leads", JSON.stringify(savedLeads));   
+     });   
+    
+}
+
